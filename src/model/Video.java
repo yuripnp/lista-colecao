@@ -23,4 +23,11 @@ public class Video {
         return description;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }

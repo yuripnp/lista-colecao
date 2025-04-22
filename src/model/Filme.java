@@ -12,6 +12,13 @@ public class Filme extends Video {
         this.releaseDate = releaseDate;
     }
 
+    @Override
+    public String toString() {
+        return "Filme{" +
+                "title='" + getTitle() + '\'' +
+                '}';
+    }
+
     public String getGenre() {
         return genre;
     }

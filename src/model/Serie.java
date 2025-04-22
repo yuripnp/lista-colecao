@@ -17,6 +17,14 @@ public class Serie extends  Video {
 
     }
 
+    public void setGenre(String genre) {
+        this.genre = genre;
+    }
+
+    public void setReleaseDate(Date releaseDate) {
+        this.releaseDate = releaseDate;
+    }
+
     public String getGenre() {
         return genre;
     }
