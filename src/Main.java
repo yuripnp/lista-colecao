@@ -1,5 +1,6 @@
 import model.Filme;
 import model.Pessoa;
+import model.Produto;
 import model.Serie;
 
 import java.util.ArrayList;
@@ -69,6 +70,17 @@ public class Main {
         System.out.println("Todas as pessoas: " + pessoas);
         System.out.println("Primeira pessoa: " + pessoas.get(0).getNome());
         System.out.println("Numero de pessoas ativas: " + pessoas.size());
+        System.out.println("---------------------------------------------------------------");
+        ArrayList<Produto> produtos = new ArrayList<>();
+        Produto produtoUm = new Produto("Produto 1", 10.0, 5);
+        Produto produtoDois = new Produto("Produto 2", 20.0, 10);
+        Produto produtoTres = new Produto("Produto 3", 30.0, 15);
+        produtos.add(produtoUm);
+        produtos.add(produtoDois);
+        produtos.add(produtoTres);
+        System.out.println("Todos os produtos: " + produtos);
+        System.out.println("Primeiro produto: " + produtos.get(0).getNome());
+
 
 
 
