@@ -1,7 +1,4 @@
-import model.Filme;
-import model.Pessoa;
-import model.Produto;
-import model.Serie;
+import model.*;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -80,6 +77,23 @@ public class Main {
         produtos.add(produtoTres);
         System.out.println("Todos os produtos: " + produtos);
         System.out.println("Primeiro produto: " + produtos.get(0).getNome());
+        System.out.println("------------------------------------------------------------------");
+        ArrayList<Video> videos = new ArrayList<>();
+        videos.add(serie);
+        videos.add(serieUm);
+        videos.add(filme);
+        videos.add(filmeDois);
+        System.out.println("Todos os videos: " + videos);
+        for (Video video : videos) {
+            if(video instanceof Serie seireItem && seireItem.getGenre().equals("Fantasia")) {
+                System.out.println("Série: " + seireItem.getTitle());
+            } else if (video instanceof Filme filmeItem) {
+                System.out.println("Filme: " + filmeItem.getDescription());
+            }
+        }
+        videos.forEach(video -> { System.out.println("Título: " + video.getTitle()); });
+
+
 
 
 

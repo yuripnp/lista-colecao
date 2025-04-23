@@ -25,6 +25,13 @@ public class Serie extends  Video {
         this.releaseDate = releaseDate;
     }
 
+    @Override
+    public String toString() {
+        return "Serie{" +
+                "title='" + getTitle() + '\'' +
+                '}';
+    }
+
     public String getGenre() {
         return genre;
     }
