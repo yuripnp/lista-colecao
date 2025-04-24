@@ -2,7 +2,7 @@ package model;
 
 import java.time.Duration;
 
-public class Video {
+public class Video implements Comparable<Video> {
     private String title;
     private String description;
     private Duration duration;
@@ -29,5 +29,10 @@ public class Video {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    @Override
+    public int compareTo(Video outroVideo) {
+        return this.title.compareTo(outroVideo.title);
     }
 }

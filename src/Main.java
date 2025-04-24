@@ -1,7 +1,6 @@
 import model.*;
 
-import java.util.ArrayList;
-import java.util.Date;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,6 +35,11 @@ public class Main {
         filmeDois.setDescription("filme sobre sonhos dentro de sonhos");
         filmeDois.setGenre("Ficção Científica");
         filmeDois.setReleaseDate("2010-07-16");
+
+        filmeTres.setTitle("O Poderoso Chefão");
+        filmeTres.setDescription("filme sobre a máfia italiana");
+        filmeTres.setGenre("Drama");
+        filmeTres.setReleaseDate("1972-03-24");
 
         ArrayList<Filme> filmes = new ArrayList<>();
         filmes.add(filme);
@@ -92,6 +96,44 @@ public class Main {
             }
         }
         videos.forEach(video -> { System.out.println("Título: " + video.getTitle()); });
+
+        System.out.println("------------------------------------------------------------------");
+        ArrayList<String> nomes = new ArrayList<>();
+        nomes.add("Lucas");
+        nomes.add("Ana");
+        nomes.add("João");
+        System.out.println("Todos os nomes: " + nomes);
+        Collections.sort(nomes);
+        System.out.println("Nomes ordenados: " + nomes);
+        System.out.println(filmes);
+        Collections.sort(filmes);
+        System.out.println("Filmes ordenados: " + filmes);
+
+        pessoas.sort(Comparator.comparing(Pessoa::getIdade));
+        System.out.println("------------------------------------------------------------");
+
+        List<Filme> filmesList = new ArrayList<>();
+        filmesList.add(filme);
+        filmesList.add(filmeDois);
+        filmesList.add(filmeTres);
+
+        List<Integer> numeros = new Vector<>(Arrays.asList(1, 2, 3, 4, 5));
+        System.out.println("Números: " + numeros);
+        Set<Integer> numerosSet = new HashSet<>(numeros);
+        numerosSet.add(6);
+        numerosSet.add(7);
+        System.out.println("Números Set: " + numerosSet);
+        numerosSet.add(7);
+        System.out.println("Números Set após adicionar duplicado: " + numerosSet);
+        Map<String, Integer> mapa = new HashMap<>();
+        mapa.put("um", 1);
+        mapa.put("dois", 2);
+        mapa.put("tres", 3);
+        System.out.println("Mapa: " + mapa);
+        List<String> lista = new Stack<>(); // LIFO ultmo entra, primeiro a sair, otimo em processamento de texto
+        lista.add("um");
+        lista.add("dois");
+        lista.add("tres");
 
 
 
